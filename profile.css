@@ -1,0 +1,244 @@
+body {
+	opacity: 0;
+	transition: opacity 1.0s; 
+	background-color: rgba(255,244,227,1);
+	overflow-y: auto;
+}
+
+#top_container {
+	display: flex;
+	left: 0px;
+	width: 200vw;
+	height: 100vh;
+	overflow-x: hidden;
+	transition: left 1.0s, opacity 0.5s;
+}
+
+.profile_page {
+	width: 100%;
+	height: 100%;
+}
+
+#footer {
+	position: fixed;
+	top: calc(100% - 24px);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(43,46,66,1);
+	transition: top, 0.8s;
+	z-index: 1000;
+}
+
+.page_title {
+	position: relative;
+	left: 80px;
+	top: 40px;
+	overflow: visible;
+	width: 340px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: 'Georgia Bold';
+	font-weight: bold;
+	font-size: 70px;
+	color: rgba(43,46,66,1);
+}
+
+.title_line {
+	position: relative;
+	left: 80px;
+	top: 70px;
+	width: 65vw;
+	max-width: 1000px;
+	min-width: 400px;
+	height: 3px;
+	background-color: rgba(43,46,66,1);
+}
+
+#div_man {
+	position: absolute;
+	right: 100px;
+	height: 700px;
+	bottom: 0px;
+	width: 280px;
+	overflow: hidden;
+	display: none;
+}
+#svg_man {
+	width : 100%;
+}
+
+/*가로길이가 충분치 않을 경우 숨김*/
+@media (min-width:1400px){ 
+	#div_man {
+		display: block;	
+	}
+}
+
+#my_info {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	left: 80px;
+	top: 140px;
+}
+
+#profile_box {
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	margin-right: 150px;
+	margin-bottom: 150px;
+}
+
+#my_photo {
+	width: 220px;
+	height: 220px;
+	overflow: visible;
+}
+
+#name_birth {
+	text-align: left;
+	font-family: "BareunBatang 3Bold";
+	white-space: nowrap;
+	font-size: 28px;
+	color: rgba(43,46,66,1);
+	margin-top: 30px;
+}
+
+#my_hashtag {
+	width: 340px;
+	height: 33px;
+	padding-top : 5px;
+	text-align: center;
+	font-family: "BareunBatang 1Light";
+	font-size: 26px;
+	color: rgba(255,244,227,1);
+	background-color: rgba(43,46,66,1);
+	margin-top: 20px;
+}
+
+#my_history {
+	display: flex;
+	flex-flow: column;
+	width: 400px;
+	margin-bottom: 50px;
+}
+
+#my_history .year_box {
+	display: flex;
+	flex-flow: column;
+	margin-bottom: 30px;
+}
+
+#my_history .whitebox {
+	position: relative;
+	left: 180px;
+	top: -15px;
+	width: 100px;
+	height: 14px;
+	background-color: white;
+	z-index: 10;
+}
+
+#my_history .years {
+	text-align: left;
+	font-family: "BareunBatang 3Bold";
+	font-size: 50px;
+	color: rgba(43,46,66,1);
+	margin-left: auto;
+	z-index: 100;
+}
+#my_history .contents {
+	text-align: right;
+	font-family: "BareunBatang 1Light";
+	font-size: 24px;
+	color: rgba(43,46,66,1);
+	margin-top: 15px;
+}
+
+#circle_next {
+	position: fixed;
+	right: -200px;
+	top: 150px;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index:100;
+}
+
+#arrow_right {
+	position: relative;
+	left: 220px;
+	top: 200px;
+	width: 25px;
+	cursor: pointer;
+}
+
+#div_skills {
+	display: grid;
+	position: relative;
+	left: 100px;
+	top: 150px;
+	grid-template-rows: repeat(6, 60px);
+	grid-template-columns: 70px 50vw;
+	row-gap: 20px;
+	column-gap: 20px;
+}
+
+.skill {
+	width: 60px;
+}
+
+.skill_bar {
+	width: 50vw;
+	height : 40px;
+	border-radius: 40px;
+	margin-top : 10px;
+	overflow: hidden;
+	background-color: rgba(230, 219, 204, 1);
+}
+
+
+.skill_bar_degree {
+	display: block;
+	height: 100%;
+	width: 0;	
+	box-sizing: border-box;
+	border-radius: 40px;
+	font-family: "Gothic";
+	font-size: 20px;
+	text-align: right;
+	line-height: 40px;
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: width 1.0s;
+}
+
+
+
+.skill_bar#bar_JS .skill_bar_degree{
+	background-color: rgb(240, 207, 22); 
+}
+
+.skill_bar#bar_HTML .skill_bar_degree{
+	background-color: rgba(241, 101, 40, 1);	
+}
+
+.skill_bar#bar_Cpp .skill_bar_degree{
+
+	background-color: rgba(101, 154, 201, 1);	
+}
+
+.skill_bar#bar_SQL .skill_bar_degree{
+	background-color: rgba(77, 77, 77, 1);	
+}
+
+.skill_bar#bar_Java .skill_bar_degree{
+	background-color: rgba(234, 106, 106, 1);	
+}
+
+.skill_bar#bar_Python .skill_bar_degree{
+	background-color: rgba(71, 192, 176, 1);	
+}

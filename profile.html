@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김준영의 포트폴리오 - 프로필</title>
+<link rel="stylesheet" type="text/css" href="common.css"/>
+<link rel="stylesheet" type="text/css" href="profile.css"/>
+</head>
+<body>
+	<div id="top_container"> 
+		<div class="profile_page" id="page_1">
+			<div class="page_title" id="timeline">
+				<span>Timeline</span>
+			</div>
+			<div class="title_line"></div>
+			<div id="my_info">
+				<div id="profile_box">
+					<img id="my_photo" src="./images/Photo.png" alt="photo">
+					<span id="name_birth">김준영 (1996.05.05)</span>
+					<div id="my_hashtag">
+						<span># 도전 정신 # 감성 # 친화력</span>
+					</div>
+				</div>
+				<div id="my_history">
+					<div class="year_box">				
+						<span class="years">2 0 1 5</span>
+						<div class="whitebox"></div>
+						<span class="contents">경안고등학교 졸업</span>
+					</div>
+					<div class="year_box">					
+						<span class="years">2 0 2 0</span>
+						<div class="whitebox"></div>
+						<span class="contents">한국항공대학교 졸업</span>
+						<span class="contents">소프트온넷 인턴 입사(10월)</span>
+					</div>
+					<div class="year_box">					
+						<span class="years">2 0 2 1</span>
+						<div class="whitebox"></div>
+						<span class="contents">소프트온넷 인턴 종료(4월)</span>
+						<span class="contents">* 업무 내용 : (Front-End)</span>
+					</div>
+				</div>
+			</div>
+			<div id="div_man">
+				<img id="svg_man" src="./svgs/profile_man.svg" alt="man">
+			</div>
+			
+		</div>
+		<div class="profile_page" id="page_2">
+			<div class="page_title" id="skills">
+				<span>Skills</span>
+			</div>
+			<div class="title_line"></div>
+			<div id="div_skills">
+				<img class="skill" id="JS" src="./images/JS.png" alt="JS">
+				<div class="skill_bar" id="bar_JS">
+					<span class="skill_bar_degree"></span>
+				</div>
+
+				<img class="skill" id="HTML" src="./images/HTML.png" alt="HTML">
+				<div class="skill_bar" id="bar_HTML">
+					<span class="skill_bar_degree"></span>
+				</div>
+
+				<img class="skill" id="Cpp" src="./images/C++.png" alt="Cpp">
+				<div class="skill_bar" id="bar_Cpp">
+					<span class="skill_bar_degree"></span>
+				</div>
+
+				<img class="skill" id="SQL" src="./images/SQL.png" alt="SQL">
+				<div class="skill_bar" id="bar_SQL">
+					<span class="skill_bar_degree"></span>
+				</div>
+
+				<img class="skill" id="Java" src="./images/Java.png" alt="Java">
+				<div class="skill_bar" id="bar_Java">
+					<span class="skill_bar_degree"></span>
+				</div>
+
+				<img class="skill" id="Python" src="./images/Python.png" alt="Python">
+				<div class="skill_bar" id="bar_Python">
+					<span class="skill_bar_degree"></span>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div id="circle_next">
+		<img id="arrow_right" src="./images/arrow_right.png" alt="next">
+	</div>
+	<div id="footer"></div>
+</div>
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+	//skill의 막대 길이
+	let skills = {JS: 66, HTML: 58, Cpp: 80, SQL: 40, Java: 40, Python: 60};
+
+	//스킬 막대 셋팅 함수
+	function set_skill_bar() {
+		for(let key in skills) {
+			let key_elem = document.querySelector(".skill_bar#bar_" + key + " .skill_bar_degree");
+			key_elem.innerHTML = skills[key] + "%";
+			key_elem.style.width = skills[key] + "%";
+		}
+	}
+
+	//화면 슬라이드 함수
+	function move_right() {
+		let top_container = document.getElementById("top_container");
+		top_container.style.position = "absolute";
+		top_container.style.left = "-100%";
+		document.getElementById("div_man").style.display = "none";	
+		
+		this.removeEventListener("click", move_right);
+		this.addEventListener("click", go_next_page);
+		//스킬 바 애니메이션
+		setTimeout(set_skill_bar, 500);
+	}
+
+	//다음 페이지로 넘기는 함수
+	function go_next_page() {
+		document.getElementById("top_container").style.opacity = "0";
+		setTimeout(function(){document.getElementById("footer").style.top = "0";}, 500);
+		setTimeout(function(){location.href="./Links.html";},1400);
+	}
+	
+	//페이지 로딩 효과 (페이드아웃)
+	setTimeout(() => {
+		document.body.style.opacity = "1";
+	}, 1)
+
+	//이벤트 추가
+	document.getElementById("arrow_right").addEventListener("click", move_right);
+
+});
+</script>

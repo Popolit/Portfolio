@@ -1,0 +1,89 @@
+body {
+	background-color: rgba(43,46,66,1);
+}
+
+#bg {
+    display : flex;
+    flex-flow: column;
+    align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(43,46,66,1);
+	overflow: hidden;
+	cursor: pointer;
+}
+#introduce_box{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: 550px;
+    flex-flow: column;
+}
+
+#svg_suit {
+	position: relative;
+	right: 10px;
+    width: 100%;
+}
+
+#initial {
+	position: relative;
+	top: -170px;
+	text-align: left;
+	font-family: "Dosis";
+	font-weight: 200;
+	font-size: 40px;
+	color: rgba(255,244,227,1);
+}
+
+#introduce_underline {
+    position: relative;
+	top: -140px;
+	opacity: 0.5;
+	background-color: rgba(255,244,227,1);
+    width: 450px; 
+    height: 1px;
+}
+
+#message_box {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+    position: absolute;
+    bottom: -250px;
+    width: 450px;
+    height: 250px;
+    background-color: rgba(191, 184, 178, 1);
+    visibility: hidden;
+	transition: bottom 1.0s;
+}
+
+#message {
+	position: relative;
+    top: 35px;
+	line-height: 37px;
+	margin-top: -6.5px;
+	text-align: center;
+	font-family: "BareunBatang 2Medium";
+	font-size: 20px;
+	color: rgba(43,46,66,1);
+}
+
+#img_double_arrow {
+	position: relative;
+	top: 80px;
+	width: 40px;
+	height: 25px;
+	cursor: pointer;
+}
+
+#cover_box {
+	position: fixed;
+	top : 100%;
+	width: 450px;
+	height: 100vh;
+	transition: all 1.0s;
+	overflow: hidden;
+	background-color: rgba(255, 244, 227, 1);
+}

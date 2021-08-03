@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김준영의 포트폴리오</title>
+<link rel="stylesheet" type="text/css" href="common.css"/>
+<link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+<body>
+    <div id="bg">
+        <div id="introduce_box">
+            <img id="svg_suit" src="./svgs/main_suit.svg" alt="Suit">
+            <div id="initial">
+                <span>CODE & CREATE</span>
+            </div>
+            <div id="introduce_underline"></div>
+            
+        </div>
+        <div id="message_box">
+            <div id="message">
+                <span>코드 역시 하나의 작품입니다.<br/>저는 작품을 만드는 </span>
+                <span style="text-decoration:underline;">김준영</span>
+                <span> 입니다.</span>                    
+            </div>
+            <img id="img_double_arrow" src="./images/DoubleArrow.png" alt="Arrow">
+        </div>
+        <div id="cover_box"></div>  
+    </div>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    //첫 클릭
+    function first_click() {
+        let msg_box = document.getElementById("message_box");
+        msg_box.style.visibility = "visible";
+        msg_box.style.bottom = "-50px";
+        document.getElementById("bg").style.cursor = "unset";
+    }
+    //두번째 클릭, 페이지 이동
+    function second_click() {
+        document.getElementById("cover_box").style.top = 0;
+        setTimeout(expand_box,1000);
+    }
+    function expand_box() {
+        document.getElementById("cover_box").style.width = "100vw";
+        setTimeout(function(){location.href="./profile.html";},1000);
+    }
+
+    //이벤트
+    document.getElementById("bg").addEventListener("click", first_click);
+    document.getElementById("img_double_arrow").addEventListener("click", second_click);
+
+});
+</script>

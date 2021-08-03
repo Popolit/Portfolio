@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Dosis';
+    src: url("./fonts/Dosis.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BareunBatang 1Light';
+    src: url("./fonts/BareunBatangL.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BareunBatang 2Medium';
+    src: url("./fonts/BareunBatangM.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BareunBatang 3Bold';
+    src: url("./fonts/BareunBatangPro3.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Georgia Bold';
+    src: url("./fonts/georgia bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin : 0;
+    min-width: 600px;
+    overflow: hidden;
+}

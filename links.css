@@ -1,0 +1,82 @@
+body {
+    opacity: 0;
+	transition: opacity 1.0s; 
+    background-color: rgba(43,46,66,1);
+	overflow-y: auto;
+}
+
+.page_title {
+	position: relative;
+	left: 80px;
+	top: 40px;
+	overflow: visible;
+	width: 340px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: 'Georgia Bold';
+	font-weight: bold;
+	font-size: 70px;
+	color: rgba(255,244,227,1);
+}
+
+.title_line {
+	position: relative;
+	left: 80px;
+	top: 70px;
+	width: 65vw;
+	max-width: 1000px;
+	min-width: 400px;
+	height: 3px;
+	background-color: rgba(255,244,227,1);
+}
+
+#links_introduce {  
+	position: relative;
+    left: 80px;
+	top: 100px;
+	line-height: 40px;
+	font-family: "BareunBatang 1Light";
+	font-size: 25px;
+	color: rgba(255,244,227,1);
+	margin-right: 100px;
+}
+
+#link_container {
+    position: relative;
+    left: 80px;
+    top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 85vw;
+}
+
+.link_box {
+    display: flex;
+    flex-flow: column;
+	margin-bottom: 100px;
+}
+
+.link_title {
+	font-family: "BareunBatang 3Bold";
+	font-size: 35px;
+	color: rgba(255,244,227,1);
+    margin-bottom: 50px;
+}
+
+.link_img {
+    border-radius: 50px;
+    width: 35vw;
+    min-width: 380px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.link_link {
+	font-family: Georgia;
+	font-size: 20px;
+	color: rgba(0,174,229,1);
+	text-decoration: underline;
+    cursor: pointer;
+    margin-left: 15px;
+}
