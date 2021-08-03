@@ -31,6 +31,10 @@
 </body>
 <script>
 document.addEventListener("DOMContentLoaded", function(){
+    //접속 기기가 모바일인지 체크하는 함수
+    function is_mobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
     //첫 클릭
     function first_click() {
         let msg_box = document.getElementById("message_box");
@@ -51,6 +55,11 @@ document.addEventListener("DOMContentLoaded", function(){
     //이벤트
     document.getElementById("bg").addEventListener("click", first_click);
     document.getElementById("img_double_arrow").addEventListener("click", second_click);
+    
 
+    //모바일 대응 불가 알림
+    if(is_mobile()) {
+        alert("이 페이지는 현재 모바일 대응이 되지 않습니다. 모바일 기기로 접속하셨을 경우, 올바르게 동작하지 않을 수도 있습니다.");
+    }
 });
 </script>
